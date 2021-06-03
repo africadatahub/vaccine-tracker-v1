@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-72472423-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-72472423-1");
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles-mh.css"> -->
+</head>
+<body>
+ 
+  
+    <div class="container">
+        <div class="tooltip">Tooltip</div>
+<div class="wrap">
+  <div class="main-map"><div class="africa-map" id="map-africa"></div></div>
+  <div id="countries" class="country-maps">
+  </div>
+  
+</div>
+<div class="updated"></div>
+<div class="credits">Data provided by <a href="https://africadatahub.org" target="_new">Africa Data Hub</a> and <a href="https://ourworldindata.org" target="_new">Our World in Data</a><br/>
+
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

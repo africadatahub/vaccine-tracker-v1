@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">COVID-19 Vaccinations In Africa</div>
+        <div class="blurb">The main map below shows countries in Africa that are doing vaccinations. The country maps show which vaccines each country is using and how many vaccinations have been done. </div> 
+        <div id="vtracker"></div>
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script>
+    var pymParent = new pym.Parent('vtracker', 'https://vaccine-tracker-africa.netlify.app/embed.html', {});
+</script>
+    </div>
+    
+  
+</body>
+</html>

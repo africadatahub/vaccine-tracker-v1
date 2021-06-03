@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+a { 
+  color: inherit;
+}
+.container {
+  position: relative;
+  width: 98%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  padding: 5px;
+}
+
+.wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5fr 8fr;
+  grid-gap: 10px;
+}
+.main-map {
+  position: relative;
+}
+.country-maps {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background: none;
+}
+
+.box {
+  color: #000;
+  padding: 0px;
+  font-size: 150%;
+  padding-bottom: 10px;
+  border: solid 1px rgb(201, 201, 201);
+  position: relative;
+}
+.leaflet-container {
+  background: none;
+}
+
+/* sizes for grid */
+.africa-map {
+  min-height: 350px;
+}
+.map-holder {
+  min-height: 80px;
+  background: none;
+}
+.details {
+  font-size: 60%;
+  text-align: center;
+}
+.details-title {
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 100%;
+  margin-bottom: 5px;
+  /* text-transform: uppercase; */
+}
+.details-vaccines {
+  width: 100%;
+  margin-top: 5px;
+  min-height: 12px;
+  /* background: #eee; */
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  /* margin: 3px; */
+  /* background: red; */
+}
+.details-label {
+  font-weight: 700;
+  font-size: 100%;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  /* margin-top: 10px; */
+}
+.vaccine-row {
+  text-align: center;
+}
+.vaccine-row * {
+  display: inline-block;
+}
+.vaccine-label {
+  font-weight: 300;
+  font-size: 90%;
+  /* transform: translate(0, -2px); */
+  margin-left: 5px;
+}
+
+/* not-grid styles */
+.title {
+  font-weight: 700;
+  font-size: 220%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+.total-vaccines {
+  margin-top: 10px;
+  font-size: 90%;
+  margin-top: 10px;
+}
+.total-vaccines-number {
+  font-weight: 700;
+  font-size: 110%;
+  margin-top: 5px;
+}
+.blurb {
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: gray;
+  text-align: center;
+}
+.credits {
+  margin-top: 5px;
+  width: 90%;
+  max-width: 500px;
+  font-size: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: gray;
+  margin-bottom: 50px;
+}
+.button {
+  background: lightgray;
+  text-transform: uppercase;
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 700;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.credits img {
+  width: 50px;
+  margin-top: 10px;
+}
+.information {
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+.info-inner {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+}
+.info-inner img {
+  width: 150px
+}
+.options {
+  position: fixed;
+  left: 0px;
+  top: 150px;
+  width: 150px;
+  line-height: 150%;
+  padding: 10px;
+}
+.download {
+  font-size: 80%;
+  text-transform: uppercase;
+}
+.download:hover {
+  cursor: pointer;
+  color: rgb(1, 95, 189);
+}
+.embed-code {
+  font-size: 80%;
+}
+.iframe-wrap {
+  width: 100%;
+  position: fixed;
+  top: 20vh;
+  left: 0px;
+  z-index: 10000;
+  visibility: hidden;
+}
+.iframe {
+  background: #000;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  padding: 20px;
+}
+
+.close {
+  float: right;
+}
+.close img {
+  width: 20px;
+  cursor: pointer;
+}
+.copy-code {
+  font-weight: 700;
+  font-size: 120%;
+}
+.tooltip {
+  position: fixed;
+  top: 30px;
+  left: 100px;
+  background: #eee;
+  padding: 10px;
+  border: solid 1px lightgray;
+  font-size: 80%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  z-index: 5000;
+  display: none;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+}
+.tt-inner { 
+  font-size: 105%;
+  line-height: 130%;
+}
+.tt-country { 
+  font-size: 100%; 
+  /* text-transform: uppercase; */
+  margin-bottom: 3px;
+}
+.tt-vaccines { 
+  font-weight: 400;
+  
+}
+
+.tt-total-label { 
+  margin-top: 3px;
+}
+.tt-value { 
+  font-weight: 400;
+}
+.updated { 
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 80%;
+  color: gray;
+}
+@media only screen and (max-width: 800px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}
