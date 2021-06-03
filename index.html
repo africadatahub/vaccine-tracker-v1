@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-72472423-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-72472423-1");
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,8 +13,33 @@
     <!-- <link rel="stylesheet" href="styles-mh.css"> -->
 </head>
 <body>
- 
-  
+  <div class="iframe-wrap">
+    <div class="iframe">
+      <div class="embed-code"><code>
+        <span class="copy-code">Copy embed code</span>
+       <div class="close"><img src="close.svg"></div>
+<pre>
+&lt;div id=&quot;vtracker&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://pym.nprapps.org/pym.v1.min.js&quot;&gt;
+&lt;/script&gt; &lt;script&gt;
+var pymParent = new pym.Parent('vtracker', 
+'https://vaccine-tracker-africa.netlify.app/', {});&lt;/script&gt;
+</pre>
+          
+              </code></div>
+    </div>
+  </div>
+  <div class="information">
+    <div class="title">COVID-19 Vaccinations In Africa</div>
+        <div class="blurb">The main map below shows countries in Africa that are doing vaccinations. The country maps show which vaccines each country is using and how many vaccinations have been done. </div> 
+    <div class="info-inner">
+      <img src="adh-logo.png">
+    </div>
+    <div class="options">
+      <div class="download download-img">Download Image</div>
+      <div class="download embed">Embed</div>
+  </div>
+  </div>
     <div class="container">
         <div class="tooltip">Tooltip</div>
 <div class="wrap">
@@ -36,7 +48,6 @@
   </div>
   
 </div>
-<div class="updated"></div>
 <div class="credits">Data provided by <a href="https://africadatahub.org" target="_new">Africa Data Hub</a> and <a href="https://ourworldindata.org" target="_new">Our World in Data</a><br/>
 
 

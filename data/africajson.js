@@ -134,7 +134,7 @@ let africa = {
         ],
       },
       properties: {
-        ADM0_A3: 'SSD',
+        ADM0_A3: 'SDS',
         NAME_LONG: 'South Sudan',
         CONTINENT: 'Africa',
       },

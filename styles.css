@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 body {
   margin: 0;
-  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
-a { 
+a {
   color: inherit;
 }
 .container {
@@ -66,9 +65,9 @@ a {
   width: 100%;
   text-align: center;
   margin-top: 5px;
-  font-size: 100%;
+  font-size: 110%;
   margin-bottom: 5px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 .details-vaccines {
   width: 100%;
@@ -89,7 +88,7 @@ a {
 .details-label {
   font-weight: 700;
   font-size: 100%;
-  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
   /* margin-top: 10px; */
 }
 .vaccine-row {
@@ -138,7 +137,7 @@ a {
   text-align: center;
 }
 .credits {
-  margin-top: 5px;
+  margin-top: 15px;
   width: 90%;
   max-width: 500px;
   font-size: 80%;
@@ -175,7 +174,7 @@ a {
   padding: 10px;
 }
 .info-inner img {
-  width: 150px
+  width: 150px;
 }
 .options {
   position: fixed;
@@ -199,7 +198,7 @@ a {
 .iframe-wrap {
   width: 100%;
   position: fixed;
-  top: 20vh;
+  top: 10px;
   left: 0px;
   z-index: 10000;
   visibility: hidden;
@@ -241,32 +240,24 @@ a {
   font-weight: 700;
   /* text-transform: uppercase; */
 }
-.tt-inner { 
+.tt-inner {
   font-size: 105%;
   line-height: 130%;
 }
-.tt-country { 
-  font-size: 100%; 
-  /* text-transform: uppercase; */
+.tt-country {
+  font-size: 110%;
+  text-transform: uppercase;
   margin-bottom: 3px;
 }
-.tt-vaccines { 
+.tt-vaccines {
   font-weight: 400;
-  
 }
 
-.tt-total-label { 
+.tt-total-label {
   margin-top: 3px;
 }
-.tt-value { 
+.tt-value {
   font-weight: 400;
-}
-.updated { 
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 80%;
-  color: gray;
 }
 @media only screen and (max-width: 800px) {
   .wrap {

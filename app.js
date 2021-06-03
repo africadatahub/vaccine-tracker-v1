@@ -1,4 +1,4 @@
-import { mapColor, borderColor, defaultColor } from './config'
+import { mapColor, borderColor } from './config'
 import L from 'leaflet'
 import { africa } from './data/africajson'
 import html2canvas from 'html2canvas'
@@ -40,7 +40,7 @@ function inIframe() {
 }
 
 function mapStyle(feature) {
-  let fillColor = defaultColor
+  let fillColor = '#fff'
   let country = countryStatus.filter(
     (d) => d.iso === feature.properties.ADM0_A3
   )
@@ -152,20 +152,11 @@ getCountryData()
     addAfricaMap()
   })
   .then(() => {
-    countryStatus.forEach((c) => {
-      console.log(c.iso)
+    console.log(countryStatus)
 
+    countryStatus.forEach((c) => {
       addCountryMap(c.iso, `map-${c.iso.toLowerCase()}`, countryStatus)
     })
-
-    // add updated date
-
-    fetch('https://api.mediahack.co.za/vaccines/owid-vaccinations-updated.php')
-      .then((data) => data.json())
-      .then((data) => {
-        document.querySelector('.updated').innerHTML =
-          'Last updated ' + data[0].date
-      })
   })
 
 function downloadImage() {
@@ -186,12 +177,15 @@ function hideEmbed() {
   document.querySelector('.iframe-wrap').style.visibility = 'hidden'
 }
 
-// logging
-let tracker = 'https://api.mediahack.co.za/adh/tracker/'
-let site = 'theconversation'
-let viz = 'africa-vaccine-tracker-map'
-let referrer = document.referrer
-let url = `${tracker}?s=${site}&v=${viz}&r=${referrer}`
-fetch(url)
+let close = document.querySelector('.close')
+close.addEventListener('click', hideEmbed)
+
+let button = document.querySelector('.download-img')
+button.addEventListener('click', downloadImage)
+
+let embedButton = document.querySelector('.embed')
+embedButton.addEventListener('click', showEmbed)
+
+document.querySelector('.information').style.display = 'block'
 
 var pymChild = new pym.Child({ polling: 500 })
